@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('yes/', static(settings.RANA_RANA_YES, document_root=settings.STATIC_ROOT)),
+    path('no/', static(settings.RANA_RANA_NO, document_root=settings.STATIC_ROOT))
 ]
